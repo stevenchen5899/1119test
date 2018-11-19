@@ -29,7 +29,7 @@
 	  array (
 		"image" => array (
 		  "source" => array (
-			"imageUri" => "http://139.59.123.8/class/learning/".$imageId.".jpeg"
+			"imageUri" => "http://139.59.123.8/class/test1120/".$imageId.".jpeg"
 		  )
 		),
 		"features" => array (
@@ -59,8 +59,8 @@
 	"messages" => array (
 	  array (
 		"type" => "text",
-		"text" => $ans_txt
-		//"text" => $result -> responses[0] -> fullTextAnnotation -> text
+		//"text" => $ans_txt
+		"text" => $result -> responses[0] -> fullTextAnnotation -> text
 	  )
 	)
   );
