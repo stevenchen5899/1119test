@@ -30,7 +30,7 @@
   
  fwrite($myfile, "\xEF\xBB\xBF".json_encode($response)); //在字串前面加上\xEF\xBB\xBF轉成utf8格式
   $header[] = "Content-Type: application/json";
-  $header[] = "Authorization: Bearer FHujQ1mSnqS1JRvlCY82a5rxUmUV9sLsLCADfiQ4QcyoBf1fpbVUynEUXKU6pFzg7DA+686VS/ZF72+TCn2eEQCB+XAhsHN/kc2705VmBwqEVRHhMGPfMssX/NVdZP0i6OH44feXB1iuZsFIb3oF8wdB04t89/1O/w1cDnyilFU=";
+  $header[] = "Authorization: Bearer iewVIXyfpmUm9qSF230NhA9kajJ5b5kSHVUL669amxxIiJh9xTgIibV5suZ3ARtgp3PglEUjMQhyC6bvADvqLAF5W9PoKC2qh4rkamH4o1/ysN0K/gChyC0bt3w+DVXqqee2Fzj5IIK3vE9egpv8cwdB04t89/1O/w1cDnyilFU=";
   $ch = curl_init("https://api.line.me/v2/bot/message/push");
   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
   curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($response));                                                                  
