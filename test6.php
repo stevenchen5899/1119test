@@ -10,7 +10,7 @@
   $sender_replyToken = $json_obj->events[0]->replyToken; //取得訊息的replyToken
   
   $sender_txt=rawurlencode($sender_txt); //因為使用get的方式呼叫luis api，所以需要轉碼
-  $ch = curl_init('https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/fae6543a-5bac-448f-a886-3131ec64913c?subscription-key=9936c7119a94474fa8c0bf284b1bec33&timezoneOffset=-360&q='$sender_txt);                                                                      
+  $ch = curl_init('https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/fae6543a-5bac-448f-a886-3131ec64913c?subscription-key=9936c7119a94474fa8c0bf284b1bec33&timezoneOffset=-360&q='.$sender_txt);                                                                      
   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");                                                                                                                          
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
   $result_str = curl_exec($ch);
